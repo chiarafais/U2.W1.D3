@@ -108,36 +108,145 @@ main {
 }
 @media screen and (max-width: 575px) {
   header {
+    border-radius: 20%;
+    height: 300px;
+    margin: 10px;
     nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 12px 0;
+      flex-wrap: wrap;
+      flex-direction: row;
       .logoShop {
         order: -1;
+        width: 70%;
+        justify-content: center;
+        height: 40px;
+        border-radius: 45px;
+        font-size: 30px;
+      }
+      div {
+        width: 40%;
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px 0;
+        font-size: 17px;
       }
     }
   }
-  main {
-    .cardZone .cardHoney {
-      width: 100%;
-    }
-
-    h1,
-    h2 {
-      text-align: center;
+}
+main {
+  margin-inline: 20px;
+  .cardZone .cardHoney {
+    width: 100%;
+    .bottone button {
+      height: 35px;
     }
   }
+  h4 {
+    font-size: 22px;
+  }
+  h1,
+  h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .cardZone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .newsZone .ourHoney {
+    background-color: #fef7e2;
+    padding: 1px 30px;
+    border-radius: 20px;
+  }
 }
+
 @media screen and (min-width: 769px) {
   body {
     display: flex;
   }
   header {
+    padding: 0 30px;
     nav {
       display: flex;
       justify-content: space-around;
       align-items: center;
       padding: 12px 0;
       flex-direction: column;
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 170px;
       .logoShop {
+        background-color: #fddf7f;
+        border-radius: 40px;
+        color: #a26633;
+        font-size: 25px;
+        font-weight: 600;
+        width: 100%;
+        height: 46px;
+        text-align: center;
         order: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+      }
+      div {
+        display: flex;
+        background-color: #fddf7f;
+        border-radius: 40px;
+        color: #a26633;
+        font-size: 15px;
+        font-weight: 600;
+        width: 100%;
+        height: 64px;
+        margin-top: 60px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  main {
+    .cardZone {
+      .cardHoney {
+        width: 30%;
+      }
+      .cardHoney:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1000px) {
+  main {
+    .cardZone {
+      .cardHoney {
+        width: 23%;
+      }
+      .cardHoney:last-of-type {
+        display: block;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1250px) {
+  main {
+    .newsZone {
+      .ourHoney {
+        display: flex;
+        flex-direction: row-reverse;
+        img {
+          width: 40%;
+          margin: 20px 0;
+        }
+        div {
+          padding: 0 20px 10px 20px;
+        }
       }
     }
   }
